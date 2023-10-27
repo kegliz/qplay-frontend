@@ -1,13 +1,17 @@
 import { Button, Group, useMantineColorScheme } from '@mantine/core';
 
-export function ColorSchemeToggle() {
+export function Footer() {
   const { setColorScheme } = useMantineColorScheme();
 
   return (
+
     <Group justify="center" mt="xl">
-      <Button onClick={() => setColorScheme('light')}>Light</Button>
+      {'Q'}
+      {' '}
+      {new Date().getFullYear()}.
+
+      <Button variant="outline" onClick={() => setColorScheme('light')}>Light</Button>
       <Button onClick={() => setColorScheme('dark')}>Dark</Button>
-      <Button onClick={() => setColorScheme('auto')}>Auto</Button>
     </Group>
   );
 }
